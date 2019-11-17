@@ -13,7 +13,10 @@ class TaskList extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.tasks.map( (task, i) => <Task key={i} task={task} id={i} />, console.log(this.props.tasks) )}
+                    {this.props.tasks.map((task, i) => {
+                        // console.log(task); 
+                        return <Task key={i} task={task} id={i} />
+                    })}
                 </tbody>
             </table>
         )
