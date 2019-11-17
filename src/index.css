@@ -1,5 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  background: url(./assets/image/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +17,131 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+input, button {
+  outline: none;
+}
+
+.todo {
+  background: #00BCD4;
+  border-radius: 5px;
+  width: 550px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.taskbar {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.taskbar input {
+  width: 75%;
+  height: 40px;
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  color: #303030;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.taskbar input:focus {
+  border: 1px solid rgb(10, 170, 233);
+}
+
+.taskbar button {
+  width: 25%;
+  height: 40px;
+  background: rgb(87, 211, 87);
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.taskbar button:hover, .taskbar button:focus {
+  background: rgb(78, 182, 78);
+}
+
+.taskbar button:focus {
+  border: 2px solid rgb(65, 139, 65);
+}
+
+table {
+  /* border-bottom: 2px solid #fff; */
+  color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+table .tasks {
+  width: 80%;
+  border-bottom: 2px solid #fff;
+  padding: 10px;
+}
+
+table .actions {
+  border-bottom: 2px solid #fff;
+  width: 20%;
+}
+
+.input-edit {
+  width: 100%;
+  height: 35px;
+  background: transparent;
+  border: none;
+  font-size: large;
+  color: #1565C0;
+}
+
+.input-edit:focus {
+  border-bottom: 2px solid #1565C0;
+}
+
+button.done-true {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  color: #00ff38;
+  background: transparent;
+  border: 2px solid #00ff38;
+  cursor: pointer;
+  margin: 0 7px;
+}
+
+button.done-false {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 50%;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  cursor: pointer;
+  margin: 0 7px;
+}
+
+button.delete {
+  width: 35px;
+  height: 40px;
+  font-size: 24px;
+  border-radius: 50%;
+  color: #ff5722;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 7px;
 }
