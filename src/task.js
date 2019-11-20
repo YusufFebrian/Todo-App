@@ -19,7 +19,7 @@ class Task extends React.Component {
         this.doneClass();
 
         this.setState({
-            todoVal: this.props.task.val
+            todoVal: this.props.task.title
         })
     }
 
@@ -37,7 +37,7 @@ class Task extends React.Component {
     }
 
     doneClass() {
-        if (this.props.task.isdone) {
+        if (this.props.task.completed) {
             this.setState({
                 doneclass: 'done-true'
             })
@@ -52,7 +52,7 @@ class Task extends React.Component {
         return (
             <tr>
                 <td className="tasks">
-                    <input type="text" ref="task_edit" className="input-edit" value={this.props.task.val} onChange={this.edit.bind(this)} />
+                    <input type="text" ref="task_edit" className="input-edit" value={this.props.task.title} onChange={this.edit.bind(this)} />
                 </td>
                 <td className="actions">
                     <button onClick={() => {this.props.toggleDone(this.props.id)}} className={this.state.doneclass}>

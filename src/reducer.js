@@ -6,7 +6,7 @@ const taskReducer = (state = [], action = {type: ''}) => {
             state = action.val;
             return state;
         case 'ADD':
-            state = state.concat({val: action.val, isdone: false});
+            state = state.concat({title: action.val, completed: false});
             return state;
         case 'DELETE':
             return state.filter((task, index) => {
@@ -15,7 +15,7 @@ const taskReducer = (state = [], action = {type: ''}) => {
         case 'EDIT':
             return state.map((task, i) => {
                 if (i == action.id) {
-                    task.val = action.val
+                    task.title = action.val
                 }
 
                 return task;
@@ -23,7 +23,7 @@ const taskReducer = (state = [], action = {type: ''}) => {
         case 'TOGGLE_DONE':
             return state.map((task, i) => {
                 if (i == action.id) {
-                    task.isdone = !task.isdone
+                    task.completed = !task.completed
                 }
 
                 return task;
