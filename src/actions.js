@@ -1,4 +1,10 @@
 const Actions = {
+    getTasks(value) {
+        return {
+            type: 'GET',
+            val: value
+        }
+    },
     addTask(value) {
         return {
             type: 'ADD',
